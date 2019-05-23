@@ -1,0 +1,402 @@
+:root
+{
+	--mainColor:  #ff3366;
+	--secondaryColor: #31312f;
+	--thirdColor: #f2f1ec;
+}
+*
+{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Open Sans';
+}
+header
+{
+	width: 100%;
+	height: 80vh;
+	background: url(../img/kapta-banner-descarga-marzo.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#headerLogo
+{
+	position: relative;
+	top: 5vh;
+	left: 10vw;
+	width: 16vmax;
+	min-height: 5vmax;
+}
+#headerTitle
+{
+	position: relative;
+	left: 10vw;
+	top: 15vh;
+	width: 46vw;
+	min-height: 40vh;
+	background: #fff;
+	padding: 3vh 2vw;
+}
+#agradecimientosHeader #headerTitle
+{
+	padding: 5vh 2vw;
+	min-height: 50vmin;
+	top: 10vh;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50vw;
+	min-height: 42vh;
+	text-align: center;
+}
+#agradecimientosHeader #headerTitle #h1Title
+{
+	font-size: 8vmin;
+}
+#agradecimientosHeader #headerTitle .boldText
+{
+	text-align: center;
+	font-size: 4vmin;
+}
+#agradecimientosHeader #headerTitle .contentBtn
+{
+	top: 5vh;
+	left: 50%;
+	transform: translateX(-62.5%);
+}
+#headerTitle #h1Title #h1Span
+{
+	color: var(--secondaryColor);
+	font-weight: 100;
+}
+#headerTitle #h1Title
+{
+	color: var(--mainColor);
+	font-size: 5.5vmin;
+}
+#articleForm h2, #articleForm h3
+{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	margin-bottom: 1vh;
+}
+#formFillIndication
+{
+	font-size: 4.3vmin;
+	font-weight: 400;
+	margin-bottom: 5vh;
+}
+.floated
+{
+	min-height: 90vh;
+	width: 42%;
+	float: left;
+	margin: 3vh 2%;
+	padding: 2%;
+}
+#articleInfo
+{
+	width: 38%;
+	background: var(--thirdColor);
+	padding: 4%;
+}
+.finalInfo
+{
+	min-height: 20vh;
+	width: 90%;
+	padding: 0 5%;
+	margin-top: 5vh;
+	clear: both;
+	text-align: center;
+}
+#agradecimientosInfo
+{
+	margin-top: 10vh;
+}
+.finalInfo article .barBehind, .finalInfo article .boldText, .finalInfo article .normalText
+{
+	text-align: center;
+}
+.finalInfo article .normalText
+{
+	padding: 0 10%;
+}
+form>*:not(.dv_recaptcha)
+{
+	position: relative;
+	width: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.barBehind
+{
+	background: linear-gradient(to right,rgba(0,0,0,1),rgba(255,255,255,1) 20%,rgba(255,255,255,1)80%,rgba(0,0,0,1));
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 0.2vmax;
+}
+.formField
+{
+	position: relative;
+}
+label
+{
+	font-weight: 900;
+    position: absolute;
+    top: 4.5vh;
+    left: 2vw;
+    z-index: 2;
+    font-size: 1.2vmax;
+    transition: transform 0.1s ease-out;
+}
+.focused label
+{
+	transform: translateY(-150%);
+	font-size: 1vmax;
+}
+input
+{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(0,0,0,0);
+	border-radius: 5px;
+	margin-top: 4vh;
+	width: 100%;
+	height: 5vh;
+	z-index: 3;
+	border: 1px solid var(--secondaryColor);
+}
+.checkboxField {
+  display: block;
+  float: left;
+  width: 40%;
+  position: relative;
+  padding-left: 4vmin;
+  margin-bottom: 3vh;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 2.6vmin;
+}
+.checkboxField input {
+  position: absolute;
+  top: -4vh;
+  left: 2vmin;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3vmin;
+  width: 3vmin;
+  background-color: #eee;
+  border: 1px solid var(--secondaryColor);
+  border-radius: 2px;
+  transition: border 0.5s ease-out;
+}
+.checkboxField:hover input ~ .checkmark {
+  background-color: var(--mainColor);
+}
+.checkboxField input:checked ~ .checkmark {
+  background-color: var(--mainColor);
+  height: 3.3vmin;
+  width: 3.3vmin;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkboxField input:checked ~ .checkmark
+{
+	border: none;
+}
+.checkboxField input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkboxField .checkmark:after {
+  left: 0.9vmin;
+  top: 0.1vmin;
+  width: 1vmin;
+  height: 1.8vmin;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+footer
+{
+	width: 100%;
+	height: 10vh;
+	margin-top: 5vh;
+	background: var(--secondaryColor);
+	color: #fff;
+	text-align: center;
+}
+footer p
+{
+	line-height: 10vh;
+	font-size: 2vmin;
+}
+form p
+{
+	margin-bottom: 4vh;
+}
+.contentBtn
+{
+	clear: both;
+	position: relative;
+	width: 80%;
+	left: 50%;
+	top: 2vh;
+	transform: translateX(-50%);
+	background: var(--mainColor);
+	color: #fff;
+	border-radius: 5px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.2vmax;
+	font-weight: 900;
+	padding: 1.4% 5%;
+	border: none;
+	transition: background 0.5s ease-out, color 0.5s ease-out;
+}
+.contentBtn:hover
+{
+	cursor: pointer;
+	background: #fff;
+	border: 0.5px solid var(--mainColor);
+	color: var(--mainColor);
+}
+.normalText, .boldText, label, .sectionTitle
+{
+	font-size: 2.6vmin;
+	font-weight: 100;
+	color: var(--secondaryColor);
+	text-align: justify;
+}
+#redesSociales i
+{
+	color: var(--mainColor);
+	font-size: 5vmin;
+	margin: 0 1vw;
+	margin-top: 4vh;
+}
+.medium, label
+{
+	font-size: 2.4vmin;
+}
+.small
+{
+	font-size: 2.2vmin;
+}
+.boldText, label, .sectionTitle
+{
+	font-weight: 600;
+}
+p
+{
+	margin-top: 5vh;
+}
+.sectionTitle
+{
+	font-size: 5vmin;
+	margin-bottom: 7vh;
+	text-align: initial;
+}
+.redText
+{
+	color: var(--mainColor);
+}
+ul
+{
+	position: relative;
+	left: 5%;
+	width: 90%;
+	top: 3vh;
+}
+ul li
+{
+	margin-bottom: 2vh;
+}
+li:before
+{
+	content: "\f00c";
+	font-family: "Font Awesome 5 Free";
+	color: var(--mainColor);
+	font-weight: 900;
+}
+hr
+{
+	position: relative;
+	width: 55vw;
+	right: 12vw;
+	top: 3vh;
+	border-color: var(--mainColor);
+}
+@media only screen and (max-width: 1100px)
+{
+	#headerTitle
+	{
+		top: 10vh;
+		width: 76vw;
+		min-height: 42vh;
+	}
+	#agradecimientosHeader #headerTitle
+	{
+		width: 76vw;
+	}
+	hr
+	{
+		right: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+	}
+	.barBehind
+	{
+		background: none;
+	}
+}
+@media only screen and (max-width: 750px), (orientation: portrait)
+{
+	#headerTitle
+	{
+		min-height: 50vmin;
+	}
+	#agradecimientosHeader #headerTitle
+	{
+		min-height: 20vh;
+		width: 90vw;
+	}
+	.floated, #articleInfo
+	{
+		clear: both;
+		padding: 3% 5%;
+		margin: 3vh 0;
+		width: 90%;
+		min-height: 50vh;
+	}
+	.small,.medium,label, .checkboxField 
+	{
+		font-size: 3vmin;
+	}
+	.focused label
+	{
+		font-size: 2vmin;
+	}
+	.normalText, .boldText, .contentBtn
+	{
+		font-size: 3.4vmin;
+	}
+}
